@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import './totalFunctionComponent.css';
 
 
-const TotalTwoNumber = () => {
+const TotalTwoNumber = (props) => {
+  
   const [numA, SetNumA] = useState(0);
   const [numB, SetNumB] = useState(0);
   const [total, SetTotal] = useState(0);
@@ -20,7 +21,7 @@ const TotalTwoNumber = () => {
   }
 
   useEffect(() =>{
-    alert("xin chào");
+    totalTwoNum();
   });
 
   return (
@@ -29,14 +30,15 @@ const TotalTwoNumber = () => {
       <div className="head-style">
         <div>
         <label className="col-md-2 text-right">Số a</label>
-          <input className="col-md-4" onChange={(e) => changeValueNumA(e)} type="Number" placeholder="Nhập vào số a"></input>
+          <input value={numA} className="col-md-4" onChange={(e) => changeValueNumA(e)} type="Number" placeholder="Nhập vào số a"></input>
         </div>
         <div>
         <label className="col-md-2 text-right">Số b</label>
-          <input className="col-md-4" onChange={(e) => changeValueNumB(e)} type="Number" placeholder="Nhập vào số b"></input>
+          <input value={numB} className="col-md-4" onChange={(e) => changeValueNumB(e)} type="Number" placeholder="Nhập vào số b"></input>
         </div>
         <button type="button" className="btn btn-primary" onClick={totalTwoNum}>Tính tổng</button>
         {total !== 0 && <h1>Tổng Hai Số = {total}</h1>}
+        <h4 className="text-right">Người tạo: {props.name}{props.age} </h4>
       </div>
     </form>
   );
