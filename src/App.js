@@ -3,8 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import TotalTwoNumber from './totalFunctionComponent/totalFunctionComponent';
 import SubTwoNumber from "./subClassComponent/subClassComponent";
-import Hobby from "./hobby/hobby"
-// const App = () => {
+
 function App() {
   let persons = [
     {
@@ -52,14 +51,11 @@ function App() {
         <h1>ĐÂY LÀ MỘT BÀI DEMO</h1>
       </div>
       <div className="form-group row">
-        {/* <div className="col-md-6 text-left">
+        <div className="col-md-6 text-left">
           <TotalTwoNumber name={elements} />
         </div>
         <div className="col-md-6 text-left">
           <SubTwoNumber />
-        </div> */}
-        <div className="col-md-12">
-          <Hobby />
         </div>
       </div>
     </div>
